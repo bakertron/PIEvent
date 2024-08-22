@@ -1,9 +1,4 @@
 {
-    "image4": {
-        "data": "hwQQABAAAAAzVDNFRVNEMjNUM0VFVUQyQ1RTRUVFRDJDVVNFRUVEMkNVU0VVQiQyQ1UkRVQyIyJCUyREMzIiIkIiRCQjIiIyMiIyIiIiIkMyIiIiIkMyQyIiIyIiQzJEJCMjMzJEIkQkMyMjMkQjVCQzMyM0REVVJDMzI0RERVUkMzNDVDU1RQ==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "Carpet"
-    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",

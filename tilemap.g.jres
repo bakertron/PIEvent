@@ -4,24 +4,6 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
-    "tile3": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "myTile1"
-    },
-    "tile4": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "myTile2"
-    },
-    "tile6": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "myTile4"
-    },
     "tile1": {
         "data": "hwQQABAAAABDVENFVERDVUNUQ1VURENVQ1RDVVRFQ1UzVEVVVEVCJDNUNVU0RSI0M1QzNSNDIjIzVCI1IiMiMjMkIjIiIyIiMyIiIiIjIyIjIiIiMiMjUiIyMiJSUlNSIjMyJVNSU1IiIzIlU1JTVSJTM0UlU1Q1I1M0RUVTVDNTU1RFRVREQw==",
         "mimeType": "image/x-mkcd-f4",
@@ -33,6 +15,12 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true,
         "displayName": "Desk"
+    },
+    "tile3": {
+        "data": "hwQQABAAAABEJVMiRSMlNEQlUyJFUyUzRCVTJUUzMzNUJUMlQiNCNFQiQyVCIyI0VCJDJSIjIjJUIkMkIiNSMlJEMzMzI1IyUkUjMjMjUjVSRSMiMkMiNSJFIyUyQyU1MzNDVTJDJTUiUkNSNUMlNSJVQyQ1QyU0IkUzJDVDJTQkRTMkNUMlNA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "Carpet2"
     },
     "level1": {
         "id": "level1",
