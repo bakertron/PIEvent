@@ -1,30 +1,13 @@
-scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles0, function (sprite, location) {
-    for (let index = 0; index < 4; index++) {
-        bug = sprites.create(img`
-            . . . c c c c c c . . . . . . . 
-            . . c 6 7 7 7 7 6 c . . . . . . 
-            . c 7 7 7 7 7 7 7 7 c . . . . . 
-            c 6 7 7 7 7 7 7 7 7 6 c . . . . 
-            c 7 c 6 6 6 6 c 7 7 7 c . . . . 
-            f 7 6 f 6 6 f 6 7 7 7 f . . . . 
-            f 7 7 7 7 7 7 7 7 7 7 f . . . . 
-            . f 7 7 7 7 6 c 7 7 6 f . . . . 
-            . . f c c c c 7 7 6 f c c c . . 
-            . . c 6 2 7 7 7 f c c 7 7 7 c . 
-            . c 6 7 7 2 7 7 c f 6 7 7 7 7 c 
-            . c 1 1 1 1 7 6 6 c 6 6 6 c c c 
-            . c 1 1 1 1 1 6 6 6 6 6 6 c . . 
-            . c 6 1 1 1 1 1 6 6 6 6 6 c . . 
-            . . c 6 1 1 1 1 1 7 6 6 c c . . 
-            . . . c c c c c c c c c c . . . 
-            `, SpriteKind.Enemy)
-        bug.follow(mySprite, 30)
-    }
+statusbars.onZero(StatusBarKind.Health, function (status) {
+    game.gameOver(false)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    statusbar.value += -1
 })
 let bug: Sprite = null
-let mySprite: Sprite = null
+let statusbar: StatusBarSprite = null
 tiles.setCurrentTilemap(tilemap`level2`)
-mySprite = sprites.create(img`
+let mySprite = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
     . . . f f f 2 2 2 2 f f f . . . 
@@ -42,6 +25,30 @@ mySprite = sprites.create(img`
     . . . . . f f f f f f . . . . . 
     . . . . . f f . . f f . . . . . 
     `, SpriteKind.Player)
+statusbar = statusbars.create(20, 4, StatusBarKind.Health)
+statusbar.attachToSprite(mySprite)
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
 mySprite.setPosition(40, 40)
+game.onUpdateInterval(5000, function () {
+    bug = sprites.create(img`
+        ...................cc...
+        ...............cccc63c..
+        ..............c633336c..
+        ..........cc.c6cc33333c.
+        .........b55c6c55c33333c
+        .........ff5c6c5ff33333c
+        .........ff5c6c5ff6333cc
+        .........b553c355c6666cc
+        ..........b55355c333333c
+        .........cc55555bcc3333c
+        ........c5545554b55c33c.
+        ........b54b4444bb5cbb..
+        ........c455b4b5554c45b.
+        ........c555c4c555c4c5c.
+        ........c5555c5555c4c5c.
+        .........ccccccccc..ccc.
+        `, SpriteKind.Enemy)
+    bug.follow(mySprite, 30)
+    music.play(music.createSoundEffect(WaveShape.Square, 200, 1, 255, 0, 100, SoundExpressionEffect.None, InterpolationCurve.Curve), music.PlaybackMode.UntilDone)
+})
